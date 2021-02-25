@@ -10,9 +10,7 @@ export class Books extends Component {
     state = {
         books: [],
         isLoaded: false,
-
     }
-
     //run when the component is added to the page
     componentDidMount() {
         axios
@@ -30,7 +28,6 @@ export class Books extends Component {
                 console.log('API error', err);
             });
     }
-
     render() {
         return (
             <div className="books">

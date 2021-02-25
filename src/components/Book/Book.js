@@ -32,13 +32,10 @@ export class Book extends Component {
             <div className="Book">
                  <h2>{this.props.title}</h2>
                  <p dangerouslySetInnerHTML={{__html: this.props.body}}></p>
-                 <p><img src={this.state.pics}/></p>
+                 <p><img src={this.state.pics} className="img"/></p>
             </div>
         ) // end return
     }
-
-
-
 }
 
 

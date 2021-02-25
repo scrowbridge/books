@@ -1,19 +1,107 @@
 body {
-  background-color: #f3f3f3;
+  background-color:#424242;
 }
 
 .Book {
   margin: 20px;
-  background-color: #383a3d;
-  color: #0c88b4;
+  background-color: #e8e8e8;
+  color: #2b2b2b;
   padding: 20px;
+  box-shadow: 2px 2px 5px #262626;
 }
 
 h1 {
-  color: #383a3d;
+  color: #e8e8e8;
+  font-size: 3em;
+  font-weight: 400;
 }
 
-.review-details ul li{
-  color: #f3f3f3;
+ h2 {
+   color: #49868C;
+   font-size: 2.4em;
+   border-bottom: solid thin #49868C;
+   font-weight: 400;
+ }
+
+ h4 {
+   font-size: 1.8em;
+   color: #49868C;
+   font-weight: 500;
+ }
+
+ul li{
   list-style-type: none;
+}
+
+p{
+  padding: 0 2%;
+  line-height: 1.5;
+}
+
+.wp-block-image img {
+  width: 20%;
+  height: auto;
+  float: right;
+  margin: 24px 20% 0 0;
+}
+
+.wp-block-quote {
+  width: 60%;
+  text-align: center;
+  margin: 10px auto;
+  color: #61a9b0;
+  font-weight: 600;
+}
+
+cite {
+  color: #959696;
+  font-weight: 400;
+  font-size: 0.8em;
+}
+
+.img {
+  width: 40%;
+  margin: 0 30%;
+}
+
+.book_details {
+  margin: 100px 0 0 10%;
+  line-height: 1.5;
+  width: 42%;
+}
+
+.book_details h4 {
+  border-top: 1px solid #959696;
+  padding: 50px 0 0 0;
+  margin-top: 50px;
+  font-weight: 400;
+}
+
+
+.book_details ul li .book-details-titles {
+  font-weight: 600;
+}
+
+.review-content, .review-details {
+  display: none;
+}
+
+.review_title h6{
+  color: #424242;
+  font-size: 1.4em;
+  margin: 10px 0 0 0;
+  font-weight: 400;
+}
+
+.review_body {
+  color: #6b6b6b;
+}
+
+.review-detail {
+  color: #5c5c5c;
+  font-size: 0.9em;
+}
+
+li:last-child {
+  padding-bottom: 30px;
 }
