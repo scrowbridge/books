@@ -3,7 +3,7 @@ import axios from "axios";
 import { Button, TextField } from '@material-ui/core';
 
 export class SearchPosts extends Component {
-    postsEndpoint = 'https://scrowbridge.bitlampsites.com/wpd/final/wordpress/wp-json/wp/v2/pages';
+    postsEndpoint = 'http://scrowbridge.bitlampsites.com/wpd/sandbox/wordpress/wp-json/wp/v2/posts';
 
     state = {
         search: '',
@@ -16,6 +16,7 @@ export class SearchPosts extends Component {
                 params: {
                     search: this.state.search,
                     per_page: 12,
+                    _embed: 1,
                 }
         })
             .then((res) => {
