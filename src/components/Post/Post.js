@@ -3,19 +3,22 @@ import PropTypes from 'prop-types';
 import './Post.scss';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
-import ListSubheader from '@material-ui/core/ListSubheader';
+import Link from '@material-ui/core/Link';
 
-
-//<p dangerouslySetInnerHTML={{__html: props.body}} ></p>
 const Post = (props) => (
 
       <GridListTile>
           <GridListTile key="Subheader" cols={6} style={{ height: 'auto' }}>
-              <ListSubheader component="div">{props.title}</ListSubheader>
               <img src={props.featuredMedia} alt={props.title} />
               <GridListTileBar
-                  title={props.author}
-                  subtitle={<span>by: {props.author}</span>}
+                  title={<Link href={props.link} target="_blank">{props.title}</Link>}
+
+                      subtitle={<span>by: {props.author}</span>}
+
+                  actionIcon={<Link href={props.description} target="_blank">
+                      <img src={props.authorImg} alt={props.author} className="authorImg" />
+                  </Link>
+                  }
               />
           </GridListTile>
       </GridListTile>
