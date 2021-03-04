@@ -1,42 +1,25 @@
 import React, {Component} from 'react';
 import './Posts.scss';
 import Post from "../Post/Post";
-import axios from "axios";
+import GridList from '@material-ui/core/GridList';
 
 export class Posts extends Component {
-    postsEndpoint = 'https://scrowbridge.bitlampsites.com/wpd/final/wordpress/wp-json/wp/v2/pages';
-    state = {
-        posts: [
-
-        ],
-
-    }
-
-    //run when the component is added to the page
-    componentDidMount() {
-        axios
-            .get(this.postsEndpoint)
-            .then((res) => {
-                console.log('Response', res);
-                    //replace array in state
-                this.setState({
-                    posts: res.data,
-                    isLoaded: true,
-                });
-            })
-            .catch((err) => {
-                console.log('API error', err);
-            });
-    }
-
     render() {
         return (
             <div className="posts">
-                {this.state.isLoaded ? '' : <p>Loading...</p>}
-                {this.state.posts.map((post) =>
-                    <Post title={post.title.rendered} body={post.content.rendered} key={post.id}/>
+                <GridList cellHeight={180} cols={3} className="grid">
+                    {this.props.posts.map((post) =>
+                <Post
+                      title={post.title.rendered}
+                      link={post.link}
+                      author={post._embedded.author[0].name}
+                      description={post._embedded.author[0].link}
+                      authorImg={post._embedded.author[0].avatar_urls[24]}
+                      featuredMedia={post._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url}
+                      key={post.id} />
                 )}
+                </GridList>
             </div>
-        ) // end return
-    } // render
+        )
+    }
 }
