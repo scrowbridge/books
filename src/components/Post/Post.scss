@@ -9,13 +9,29 @@
   padding: 20px;
 }
 
-.posts .MuiGridList-root {
-  padding: 40px 20%;
-  justify-content: center;
+.Search {
+  .MuiFormControl-root .MuiFormLabel-root{
+    color: #bdbdbd;
+  }
+
+  .MuiButton-containedPrimary {
+    background-color: #30ceff;
+
+    &:hover {
+      background-color: #bdbdbd;
+    }
+  }
 }
 
-.posts .MuiGridList-root .MuiGridListTile-root {
-  margin: 5px 0.5%;
+.posts {
+  .MuiGridList-root {
+    padding: 40px 20%;
+    justify-content: center;
+
+    .MuiGridListTile-root {
+      margin: 5px 0.5%;
+    }
+  }
 }
 
 .MuiGridListTileBar-title a {
@@ -26,11 +42,8 @@
 .MuiGridListTileBar-subtitle span {
   color: #30ceff;
   margin-left: 10%;
-
 }
 
 .MuiGridListTileBar-actionIcon {
-
   margin-left: 5%;
-
 }
