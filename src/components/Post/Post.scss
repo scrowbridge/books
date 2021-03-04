@@ -1,3 +1,7 @@
+.MuiGridList-root {
+  background-color: #ebebeb;
+}
+
 .Post {
   margin: 20px;
   background-color: #383a3d;
@@ -5,6 +9,28 @@
   padding: 20px;
 }
 
-.authorImg {
-  margin-right: 5%;
+.posts .MuiGridList-root {
+  padding: 40px 20%;
+  justify-content: center;
+}
+
+.posts .MuiGridList-root .MuiGridListTile-root {
+  margin: 5px 0.5%;
+}
+
+.MuiGridListTileBar-title a {
+  color: #fff;
+  margin-left: 10%;
+}
+
+.MuiGridListTileBar-subtitle span {
+  color: #30ceff;
+  margin-left: 10%;
+
+}
+
+.MuiGridListTileBar-actionIcon {
+
+  margin-left: 5%;
+
 }
